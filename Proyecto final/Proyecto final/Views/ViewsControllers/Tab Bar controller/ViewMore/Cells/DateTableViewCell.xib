@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="213" id="KGk-i7-Jjw" customClass="DateTableViewCell" customModule="Proyecto_final" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="453" height="213"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-k4-We5">
+                        <rect key="frame" x="15" y="6" width="20" height="17.5"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="DHD-L8-FA3"/>
+                            <constraint firstAttribute="height" constant="20" id="YhV-N6-Ai6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9Q-xx-BfO">
+                        <rect key="frame" x="40" y="5" width="408" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fd5-k4-We5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="07n-wQ-vgH"/>
+                    <constraint firstAttribute="trailing" secondItem="f9Q-xx-BfO" secondAttribute="trailing" constant="5" id="8x8-1w-fhb"/>
+                    <constraint firstAttribute="bottom" secondItem="fd5-k4-We5" secondAttribute="bottom" constant="5" id="Uw3-pb-orx"/>
+                    <constraint firstItem="fd5-k4-We5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="fBR-Cf-xup"/>
+                    <constraint firstItem="f9Q-xx-BfO" firstAttribute="leading" secondItem="fd5-k4-We5" secondAttribute="trailing" constant="5" id="rd2-47-lpS"/>
+                    <constraint firstAttribute="bottom" secondItem="f9Q-xx-BfO" secondAttribute="bottom" constant="5" id="wam-c3-1mG"/>
+                    <constraint firstItem="f9Q-xx-BfO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="wnc-rm-Z8Q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblDate" destination="f9Q-xx-BfO" id="gQy-Cv-p8d"/>
+            </connections>
+            <point key="canvasLocation" x="199.27536231884059" y="120.87053571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+    </resources>
+</document>

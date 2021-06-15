@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewMoreViewController" customModule="Proyecto_final" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBottom" destination="nOj-oS-nvy" id="6sQ-sJ-cJi"/>
+                <outlet property="btnEvent" destination="M41-bx-gQj" id="jxi-j0-q3l"/>
+                <outlet property="tableView" destination="iBx-VC-4pT" id="0Dk-z2-xmS"/>
+                <outlet property="tableViewBottomConstraint" destination="vQS-nS-38U" id="c53-H0-dhF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBx-VC-4pT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M41-bx-gQj">
+                    <rect key="frame" x="324" y="772" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="OJF-Dt-JJD"/>
+                        <constraint firstAttribute="width" constant="70" id="mAb-h6-Koa"/>
+                    </constraints>
+                    <state key="normal" image="darthvader"/>
+                    <connections>
+                        <action selector="actionEvent:" destination="-1" eventType="touchUpInside" id="XAv-f0-ML8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOj-oS-nvy">
+                    <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="yT8-nU-RsJ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="actionAnswer:" destination="-1" eventType="touchUpInside" id="Fco-OA-mJp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nOj-oS-nvy" secondAttribute="bottom" id="1rd-dT-g93"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iBx-VC-4pT" secondAttribute="trailing" id="1rs-bD-VpC"/>
+                <constraint firstItem="iBx-VC-4pT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Jvd-wl-vVG"/>
+                <constraint firstItem="iBx-VC-4pT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L8a-Xw-gGy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M41-bx-gQj" secondAttribute="trailing" constant="20" id="TJO-Hc-nJ6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="M41-bx-gQj" secondAttribute="bottom" constant="20" id="e70-Co-pZh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nOj-oS-nvy" secondAttribute="trailing" id="sDN-w5-o1D"/>
+                <constraint firstItem="nOj-oS-nvy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uyS-jC-aAG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iBx-VC-4pT" secondAttribute="bottom" id="vQS-nS-38U"/>
+            </constraints>
+            <point key="canvasLocation" x="58" y="42"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="darthvader" width="512" height="462"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
