@@ -36,6 +36,6 @@ struct Constants {
             serverURL + "/api/answer"
         }
     }
-    static var actualUser = UserRepository(id: nil, username: nil, is_newsPaperman: false, is_superuser: false)
+    static var actualUser = UserRepository(id: nil, username: nil, is_newsPaperman: false, is_superuser: false, verified_email: false)
     static var token: String = ""
 }

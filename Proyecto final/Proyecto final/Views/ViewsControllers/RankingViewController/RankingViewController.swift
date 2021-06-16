@@ -71,6 +71,7 @@ class RankingViewController: UIViewController {
     @IBAction func actionSave(_ sender: Any) {
         print("Has pulsado el botón enviar")
         var avalibleNumbers = [Int]()
+        guard films.count > 0 else { showAlert("Error", message: "Not films avalible", withOneAction: "Okey"); return }
         for actual in 1...films.count {
             avalibleNumbers.append(actual)
         }

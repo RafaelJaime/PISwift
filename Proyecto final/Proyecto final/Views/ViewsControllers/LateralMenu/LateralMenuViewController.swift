@@ -83,7 +83,7 @@ extension LateralMenuViewController: UITableViewDelegate, UITableViewDataSource 
             view.modalPresentationStyle = .fullScreen
             present(view, animated: false, completion: nil)
         case .action:
-            Constants.actualUser = UserRepository(id: nil, username: nil, is_newsPaperman: false, is_superuser: false)
+            Constants.actualUser = UserRepository(id: nil, username: nil, is_newsPaperman: false, is_superuser: false, verified_email: false)
             Constants.token = ""
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "LogingViewController")

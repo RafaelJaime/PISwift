@@ -93,7 +93,7 @@ final class NetworkingProvider {
         AF.request(Constants.urls.tokens, method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: Constants.urls.kStatusOk).responseDecodable(of: tokenResponse.self) { (response) in
             if let user = response.value {
                 Constants.token = user.token
-                Constants.actualUser = UserRepository(id: user.user.id, username: user.user.username, is_newsPaperman: user.user.is_newsPaperman, is_superuser: user.user.is_superuser)
+                Constants.actualUser = UserRepository(id: user.user.id, username: user.user.username, is_newsPaperman: user.user.is_newsPaperman, is_superuser: user.user.is_superuser, verified_email: user.user.verified_email)
                 solution()
             } else {
                 error()

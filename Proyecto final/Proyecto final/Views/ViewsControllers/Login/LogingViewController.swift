@@ -68,16 +68,22 @@ class LogingViewController: UIViewController {
         NetworkingProvider.shared.postToken(user: token(user: username, password: password)) {
             print("Se ha completado correctamente")
             print(Constants.token)
-            viewController.showAlert("Successful", message: "You have been logued correctly.", withOneAction: "Okey") { [weak viewController] _ in
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController")
-                if let tabViewController = storyboard.instantiateViewController(identifier: "TabBarViewController") as? UITabBarController {
-                    tabViewController.modalPresentationStyle = .fullScreen
-                    viewController?.present(tabViewController, animated: true, completion: nil)
+            if Constants.actualUser.verified_email {
+                viewController.showAlert("Successful", message: "You have been logued correctly.", withOneAction: "Okey") { [weak viewController] _ in
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    //                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController")
+                    if let tabViewController = storyboard.instantiateViewController(identifier: "TabBarViewController") as? UITabBarController {
+                        tabViewController.modalPresentationStyle = .fullScreen
+                        viewController?.present(tabViewController, animated: true, completion: nil)
+                    }
+    //                let nav = UINavigationController(rootViewController: vc)
+    //                nav.modalPresentationStyle = .fullScreen
+    //                viewController?.present(nav, animated: true, completion: nil)
                 }
-//                let nav = UINavigationController(rootViewController: vc)
-//                nav.modalPresentationStyle = .fullScreen
-//                viewController?.present(nav, animated: true, completion: nil)
+            } else {
+                Constants.actualUser = UserRepository(id: nil, username: nil, is_newsPaperman: false, is_superuser: false, verified_email: false)
+                Constants.token = ""
+                viewController.showAlert("Alert!", message: "Please verify your email before enter the application", withOneAction: "Okey")
             }
         } error: {
             viewController.showAlert("Error", message: "something bad happened", withOneAction: "Okey")

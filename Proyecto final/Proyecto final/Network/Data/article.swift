@@ -28,13 +28,14 @@ struct ArticleRepository: Codable {
 struct UserRepository: Codable {
     let id: Int?
     let username: String?
-    let is_newsPaperman, is_superuser: Bool
+    let is_newsPaperman, is_superuser, verified_email: Bool
 
     enum CodingKeys: String, CodingKey {
         case id
         case username
         case is_newsPaperman
         case is_superuser
+        case verified_email
     }
 }
 

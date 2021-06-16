@@ -25,7 +25,7 @@ class ForumTableViewCell: UITableViewCell {
     }
     
     func loadData(title: String, username: String) {
-        lblTitle.text = title
+        lblTitle.text = title.lowercased()
         lblUsername.text = username
     }
     

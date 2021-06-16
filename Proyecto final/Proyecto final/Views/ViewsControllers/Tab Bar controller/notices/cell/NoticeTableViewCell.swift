@@ -41,7 +41,7 @@ class NoticeTableViewCell: UITableViewCell {
             ivImage.downloaded(from: im)
         }
         
-        lblTitle.text = title
+        lblTitle.text = title.lowercased()
         if let dat = date {
             lblDate.text = dat.dateDMY
         }
